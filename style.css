@@ -275,8 +275,11 @@ nav a:hover .code {
 
 .desc {
   padding: 2rem;
-  text-align: left;
+  height: 100%; /* Ensure the description stays within the frame */
+  overflow: hidden; 
+  text-align: center;/* Add scrollbars if the content overflows */
 }
+
 
 .project-tile {
   margin: 2rem 0 2rem 0;
