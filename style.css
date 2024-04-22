@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-/*this is css style*/
+
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -11,7 +11,7 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.5;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   color: #011640;
   overflow-x: hidden;
 }
@@ -45,25 +45,22 @@ a {
   max-width: 100%;
   height: auto;
   display: block;
-  
-    background-size: cover;
-    -webkit-background-position: center;
-    background-position: center center;
-    margin: 20px;
-    box-shadow: 0 5px 5px 5px rgba(136, 231, 207, 0.911);
-    animation: animate 5s ease-in-out infinite;
-    transition: all 1s ease-in-out;
+  background-size: cover;
+  background-position: center center;
+  margin: 20px;
+  box-shadow: 0 5px 5px 5px rgba(136, 231, 207, 0.911);
+  animation: animate 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
 }
 
 @keyframes animate {
-    0%, 100%{
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50%{
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
+  0%, 100%{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50%{
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
 }
-
 
 /* Navigation */
 
@@ -106,16 +103,13 @@ nav a:hover .code {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* border: 1px solid red; */
   align-items: center; 
-   height: 100vh;
- 
+  height: 100vh;
 }
 
 @media (max-width: 1000px) {
   #welcome-section {
     text-align: center;
-    /* margin-top: 10rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,7 +119,8 @@ nav a:hover .code {
 
 .welcome-img  {
   margin-top: 8rem;
-  width: 580px;
+  width: 50vw;
+  max-width: 580px;
   height: auto;
 }
 
@@ -140,7 +135,8 @@ nav a:hover .code {
   
   #mobile-only {
     display: initial;
-    width: 450px;
+    width: 90vw;
+    max-width: 450px;
     height: auto;
   }
 }
@@ -164,7 +160,7 @@ nav a:hover .code {
 /* About section */
 
 #about {
-  /* padding: 10rem 5rem 5rem 5rem; */
+  padding: 10rem 5rem 5rem 5rem;
 }
 
 #about h2 {
@@ -221,25 +217,24 @@ nav a:hover .code {
 #projects {
   padding: 4rem 5rem;
   text-align: center;
-  /* border: 1px solid red; */
   margin-top: 2rem;
 }
+
 .project-img {
-  width: 400px; /* Set width of the container */
-  height: 200px; /* Set height of the container */
-  border: 1px solid #ccc; /* Set border color */
-  padding: 10px; /* Add padding around the image */
-  background-color: #f0f0f0; /* Set background color */
-  overflow: hidden; /* Hide any overflow from the images */
+  width: 90%; /* Adjusted width for responsiveness */
+  max-width: 400px; /* Max width to maintain aspect ratio */
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f0f0f0;
+  overflow: hidden;
 }
 
 .project-img img {
-  width: 100%; /* Make the image fill the container */
-  height: 100%; /* Make the image fill the container */
-  object-fit: cover; /* Maintain aspect ratio while covering the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-
 
 #projects > p {
   margin-bottom: 5rem;
@@ -252,7 +247,6 @@ nav a:hover .code {
   margin: 1.5rem auto;
   height: auto;
 }
-
 
 @media (max-width: 400px) {
   .projects-grid {
@@ -275,11 +269,10 @@ nav a:hover .code {
 
 .desc {
   padding: 2rem;
-  height: 100%; /* Ensure the description stays within the frame */
-  overflow: hidden; 
-  text-align: center;/* Add scrollbars if the content overflows */
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
 }
-
 
 .project-tile {
   margin: 2rem 0 2rem 0;
@@ -293,7 +286,7 @@ nav a:hover .code {
 }
 
 .project-tile a {
-  color: inherit; /* Optionally inherit the link color */
+  color: inherit;
 }
 
 .project-tile > a {
@@ -334,7 +327,6 @@ nav a:hover .code {
   padding: 1rem;
 }
 
-
 .contact-details:hover .contact-icon {
   filter: invert(83%) sepia(39%) saturate(6798%) hue-rotate(308deg) brightness(92%) contrast(107%);
 }
@@ -364,8 +356,7 @@ footer .code {
 
 /* Text Selection Color */
 
-
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
   color: #fff;
   background: #02A1A3;
 }
